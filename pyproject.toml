@@ -7,10 +7,10 @@ name = "playwright-tests"
 version = "0.1.0"
 description = "Playwright test suite"
 dependencies = [
- "playwright",
- "pytest",
- "pytest-playwright",
- "pytest-base-url",
+  "playwright",
+  "pytest",
+  "pytest-playwright",
+  "pytest-base-url"
 ]
 
 [tool.setuptools.packages.find]
@@ -20,5 +20,5 @@ exclude = ["Tests*"]
 
 [tool.pytest.ini_options]
 testpaths = ["Tests"]
-pythonpath = [".", "Tests"]  # Root (car.py) + Tests/
-addopts = "-v -s
+pythonpath = ["."]
+addopts = "-v -s"
