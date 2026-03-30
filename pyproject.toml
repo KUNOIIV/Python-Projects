@@ -20,5 +20,5 @@ exclude = ["Tests*"]
 
 [tool.pytest.ini_options]
 testpaths = ["Tests"]
-pythonpath = ["Tests"]
-addopts = "-v -s"
+pythonpath = [".", "Tests"]  # Root (car.py) + Tests/
+addopts = "-v -s
