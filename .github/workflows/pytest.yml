@@ -17,15 +17,15 @@ jobs:
       with:
         python-version: '3.12'
 
-    - name: Install project + deps
-      run: pip install -e .  # Uses pyproject.toml (pytest + others)
+    - name: Install pytest
+      run: pip install pytest
 
     - name: Run tests
-      run: pytest -v  # Auto-uses pyproject.toml config (testpaths=Tests/, pythonpath=Tests/)
+      run: pytest Tests/ -v -s
 
-    - name: Upload test results (if failed)
+    - name: Upload results (if failed)
       if: failure()
       uses: actions/upload-artifact@v4
       with:
         name: pytest-results
-        path: .pytest_cache/
+        path: Tests/.pytest_cache/
