@@ -3,20 +3,13 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "playwright-tests"
+name = "python-projects"  # Changed from "playwright-tests" (no browser)
 version = "0.1.0"
-description = "Playwright test suite"
+description = "Python test suite"
 dependencies = [
-  "playwright",
   "pytest",
-  "pytest-playwright",
   "pytest-base-url"
 ]
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["pages*"]
-exclude = ["Tests*"]
 
 [tool.pytest.ini_options]
 testpaths = ["Tests"]
