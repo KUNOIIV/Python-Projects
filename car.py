@@ -1,20 +1,20 @@
 class Car:
     def __init__(self, colour, speed=0):     
-        self.color = colour
+        self.colour = colour
         self.speed = speed
         self.engine_running = False
     # Initializes car with colour, speed, engine off
 
     def start_engine(self):
         self.engine_running = True
-        print(f"{CYAN}{self.color} Initializing Car engine starting............. "
+        print(f"{CYAN}{self.colour} Initializing Car engine starting............. "
               f"Vroooooooooom. Vroooom, Vrooooooooommmmmm!!{RESET}")
     # Engine starts 
 
     def drive(self, new_speed):
         if self.engine_running:
             self.speed = new_speed
-            print(f"{GREEN}Driving {self.color} car at {new_speed} mph.{RESET}")
+            print(f"{GREEN}Driving {self.colour} car at {new_speed} mph.{RESET}")
         else:
             print(f"{RED}Engine's off bro. Start it first and hear the rooooarr!{RESET}")
     # Drives at given speed if engine on
