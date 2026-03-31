@@ -3,13 +3,13 @@ class Car:
         self.color = colour
         self.speed = speed
         self.engine_running = False
-    # Initializes car with color, speed, engine off
+    # Initializes car with colour, speed, engine off
 
     def start_engine(self):
         self.engine_running = True
         print(f"{CYAN}{self.color} Initializing Car engine starting............. "
               f"Vroooooooooom. Vroooom, Vrooooooooommmmmm!!{RESET}")
-    # Starts engine with dramatic roar
+    # Engine starts 
 
     def drive(self, new_speed):
         if self.engine_running:
